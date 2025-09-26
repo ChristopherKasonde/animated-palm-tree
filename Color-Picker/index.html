@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Advanced Color Picker</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>🎨 Advanced Color Picker</h1>
+
+      <div class="picker-grid">
+        <div class="color-wheel-container">
+          <div class="color-wheel" id="colorWheel">
+            <div class="wheel-pointer" id="wheelPointer"></div>
+          </div>
+        </div>
+
+        <div class="controls-panel">
+          <div class="color-preview" id="colorPreview"></div>
+
+          <div class="input-group">
+            <button class="btn eyedropper-btn" id="eyedropperBtn">
+              <span class="eyedropper-icon">🎯</span>
+              Pick from Screen
+            </button>
+            <div class="feature-note" id="eyedropperNote">
+              Click to sample any color from your screen
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label>RGB Values</label>
+            <div class="input-row">
+              <input
+                type="number"
+                id="rgbR"
+                min="0"
+                max="255"
+                placeholder="R"
+              />
+              <input
+                type="number"
+                id="rgbG"
+                min="0"
+                max="255"
+                placeholder="G"
+              />
+              <input
+                type="number"
+                id="rgbB"
+                min="0"
+                max="255"
+                placeholder="B"
+              />
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label>HSL Sliders</label>
+            <div class="slider-container">
+              <label>Hue: <span id="hueValue">0</span>°</label>
+              <input
+                type="range"
+                class="slider hue-slider"
+                id="hueSlider"
+                min="0"
+                max="360"
+                value="0"
+              />
+            </div>
+            <div class="slider-container">
+              <label>Saturation: <span id="satValue">100</span>%</label>
+              <input
+                type="range"
+                class="slider saturation-slider"
+                id="satSlider"
+                min="0"
+                max="100"
+                value="100"
+              />
+            </div>
+            <div class="slider-container">
+              <label>Lightness: <span id="lightValue">50</span>%</label>
+              <input
+                type="range"
+                class="slider lightness-slider"
+                id="lightSlider"
+                min="0"
+                max="100"
+                value="50"
+              />
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label>Hex Color</label>
+            <input type="text" id="hexInput" placeholder="#FF0000" />
+          </div>
+        </div>
+      </div>
+
+      <div class="palette-section">
+        <h3>Color Palette Manager</h3>
+        <div class="palette-controls">
+          <button class="btn btn-primary" id="addToPalette">
+            Add Current Color
+          </button>
+          <button class="btn btn-secondary" id="clearPalette">Clear All</button>
+          <button class="btn btn-secondary" id="generatePalette">
+            Generate Harmony
+          </button>
+        </div>
+        <div class="palette-grid" id="paletteGrid"></div>
+      </div>
+
+      <div class="export-section">
+        <h3>Export Formats</h3>
+        <div class="export-formats">
+          <div class="format-card">
+            <h4>CSS</h4>
+            <code id="cssOutput">color: #ff0000;</code>
+          </div>
+          <div class="format-card">
+            <h4>RGB</h4>
+            <code id="rgbOutput">rgb(255, 0, 0)</code>
+          </div>
+          <div class="format-card">
+            <h4>HSL</h4>
+            <code id="hslOutput">hsl(0, 100%, 50%)</code>
+          </div>
+          <div class="format-card">
+            <h4>JSON Palette</h4>
+            <code id="jsonOutput">{"colors": []}</code>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
