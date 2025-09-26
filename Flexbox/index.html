@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Complete CSS Flexbox Guide</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>🎯 Complete CSS Flexbox Guide</h1>
+
+      <div class="highlight">
+        <strong>What is Flexbox?</strong><br />
+        Flexbox (Flexible Box Layout) is a CSS layout method that allows you to
+        arrange elements in rows or columns. It's perfect for creating
+        responsive layouts, centering content, and distributing space between
+        elements.
+      </div>
+
+      <h2>1. Getting Started with Flexbox</h2>
+
+      <h3>Basic Flex Container</h3>
+      <p>
+        To create a flex container, simply add <code>display: flex</code> to an
+        element:
+      </p>
+
+      <div class="code">.container { display: flex; }</div>
+
+      <div class="demo-container flex-basic">
+        <div class="demo-item">Item 1</div>
+        <div class="demo-item">Item 2</div>
+        <div class="demo-item">Item 3</div>
+      </div>
+
+      <h2>2. Flex Direction</h2>
+      <p>Controls the main axis direction of flex items.</p>
+
+      <h3>flex-direction: row (default)</h3>
+      <div class="demo-container flex-basic">
+        <div class="demo-item">1</div>
+        <div class="demo-item">2</div>
+        <div class="demo-item">3</div>
+      </div>
+
+      <h3>flex-direction: column</h3>
+      <div class="demo-container flex-column">
+        <div class="demo-item">1</div>
+        <div class="demo-item">2</div>
+        <div class="demo-item">3</div>
+      </div>
+
+      <h3>flex-direction: row-reverse</h3>
+      <div class="demo-container flex-row-reverse">
+        <div class="demo-item">1</div>
+        <div class="demo-item">2</div>
+        <div class="demo-item">3</div>
+      </div>
+
+      <h3>flex-direction: column-reverse</h3>
+      <div class="demo-container flex-column-reverse">
+        <div class="demo-item">1</div>
+        <div class="demo-item">2</div>
+        <div class="demo-item">3</div>
+      </div>
+
+      <h2>3. Justify Content (Main Axis)</h2>
+      <p>Controls alignment along the main axis.</p>
+
+      <h3>justify-content: flex-start (default)</h3>
+      <div class="demo-container justify-start">
+        <div class="demo-item">1</div>
+        <div class="demo-item">2</div>
+        <div class="demo-item">3</div>
+      </div>
+
+      <h3>justify-content: flex-end</h3>
+      <div class="demo-container justify-end">
+        <div class="demo-item">1</div>
+        <div class="demo-item">2</div>
+        <div class="demo-item">3</div>
+      </div>
+
+      <h3>justify-content: center</h3>
+      <div class="demo-container justify-center">
+        <div class="demo-item">1</div>
+        <div class="demo-item">2</div>
+        <div class="demo-item">3</div>
+      </div>
+
+      <h3>justify-content: space-between</h3>
+      <div class="demo-container justify-between">
+        <div class="demo-item">1</div>
+        <div class="demo-item">2</div>
+        <div class="demo-item">3</div>
+      </div>
+
+      <h3>justify-content: space-around</h3>
+      <div class="demo-container justify-around">
+        <div class="demo-item">1</div>
+        <div class="demo-item">2</div>
+        <div class="demo-item">3</div>
+      </div>
+
+      <h3>justify-content: space-evenly</h3>
+      <div class="demo-container justify-evenly">
+        <div class="demo-item">1</div>
+        <div class="demo-item">2</div>
+        <div class="demo-item">3</div>
+      </div>
+
+      <h2>4. Align Items (Cross Axis)</h2>
+      <p>Controls alignment along the cross axis.</p>
+
+      <h3>align-items: stretch (default)</h3>
+      <div class="demo-container align-stretch">
+        <div class="demo-item">1</div>
+        <div class="demo-item">2</div>
+        <div class="demo-item">3</div>
+      </div>
+
+      <h3>align-items: flex-start</h3>
+      <div class="demo-container align-start">
+        <div class="demo-item">1</div>
+        <div class="demo-item">2</div>
+        <div class="demo-item">3</div>
+      </div>
+
+      <h3>align-items: flex-end</h3>
+      <div class="demo-container align-end">
+        <div class="demo-item">1</div>
+        <div class="demo-item">2</div>
+        <div class="demo-item">3</div>
+      </div>
+
+      <h3>align-items: center</h3>
+      <div class="demo-container align-center">
+        <div class="demo-item">1</div>
+        <div class="demo-item">2</div>
+        <div class="demo-item">3</div>
+      </div>
+
+      <h3>align-items: baseline</h3>
+      <div class="demo-container align-baseline">
+        <div class="demo-item">1</div>
+        <div class="demo-item" style="font-size: 2em">2</div>
+        <div class="demo-item">3</div>
+      </div>
+
+      <h2>5. Flex Wrap</h2>
+      <p>Controls whether flex items wrap to new lines.</p>
+
+      <h3>flex-wrap: nowrap (default)</h3>
+      <div class="demo-container flex-nowrap">
+        <div class="demo-item">Item 1</div>
+        <div class="demo-item">Item 2</div>
+        <div class="demo-item">Item 3</div>
+        <div class="demo-item">Item 4</div>
+        <div class="demo-item">Item 5</div>
+      </div>
+
+      <h3>flex-wrap: wrap</h3>
+      <div class="demo-container flex-wrap">
+        <div class="demo-item">Item 1</div>
+        <div class="demo-item">Item 2</div>
+        <div class="demo-item">Item 3</div>
+        <div class="demo-item">Item 4</div>
+        <div class="demo-item">Item 5</div>
+      </div>
+
+      <h2>6. Gap Property</h2>
+      <p>Creates space between flex items.</p>
+
+      <div class="code">.container { display: flex; gap: 20px; }</div>
+
+      <div class="demo-container gap-demo">
+        <div class="demo-item">1</div>
+        <div class="demo-item">2</div>
+        <div class="demo-item">3</div>
+      </div>
+
+      <h2>7. Flex Item Properties</h2>
+
+      <h3>flex-grow</h3>
+      <p>Controls how much a flex item should grow relative to other items.</p>
+
+      <div class="code">
+        .item:nth-child(2) { flex-grow: 2; /* This item grows twice as much */ }
+      </div>
+
+      <div class="demo-container flex-grow-demo flex-basic">
+        <div class="demo-item">1</div>
+        <div class="demo-item">2 (grow: 2)</div>
+        <div class="demo-item">3</div>
+      </div>
+
+      <h3>flex-shrink</h3>
+      <p>Controls how much a flex item should shrink when space is limited.</p>
+
+      <div class="demo-container flex-shrink-demo">
+        <div class="demo-item">Shrinks</div>
+        <div class="demo-item">No Shrink</div>
+        <div class="demo-item">Shrinks</div>
+      </div>
+
+      <h3>align-self</h3>
+      <p>Overrides the align-items value for individual flex items.</p>
+
+      <div class="demo-container align-self-demo">
+        <div class="demo-item">Start</div>
+        <div class="demo-item">Center</div>
+        <div class="demo-item">End</div>
+      </div>
+
+      <h3>order</h3>
+      <p>Changes the visual order of flex items without affecting HTML.</p>
+
+      <div class="demo-container flex-basic order-demo">
+        <div class="demo-item">HTML: 1st (order: 3)</div>
+        <div class="demo-item">HTML: 2nd (order: 1)</div>
+        <div class="demo-item">HTML: 3rd (order: 2)</div>
+      </div>
+
+      <h2>8. Perfect Centering</h2>
+      <p>One of the most common use cases for Flexbox:</p>
+
+      <div class="code">
+        .center { display: flex; justify-content: center; align-items: center; }
+      </div>
+
+      <div class="perfect-center">Perfectly Centered Content! 🎯</div>
+
+      <h2>9. Practical Examples</h2>
+
+      <div class="practical-example">
+        <h3>Navigation Bar</h3>
+        <nav class="navbar">
+          <div class="nav-brand">Brand</div>
+          <ul class="nav-menu">
+            <li>Home</li>
+            <li>About</li>
+            <li>Services</li>
+            <li>Contact</li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="practical-example">
+        <h3>Responsive Card Layout</h3>
+        <div class="card-container">
+          <div class="card">
+            <h4>Card 1</h4>
+            <p>
+              This is a flexible card that adapts to different screen sizes
+              using Flexbox.
+            </p>
+          </div>
+          <div class="card">
+            <h4>Card 2</h4>
+            <p>
+              Each card has flex: 1 1 250px which means they grow, shrink, and
+              have a base width of 250px.
+            </p>
+          </div>
+          <div class="card">
+            <h4>Card 3</h4>
+            <p>
+              Try resizing your browser to see how these cards respond to
+              different screen sizes.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <h2>10. Flexbox Cheat Sheet</h2>
+
+      <div class="cheat-sheet">
+        <h4>Container Properties:</h4>
+        <div class="property-grid">
+          <div class="property">
+            <strong>display:</strong> flex | inline-flex
+          </div>
+          <div class="property">
+            <strong>flex-direction:</strong> row | row-reverse | column |
+            column-reverse
+          </div>
+          <div class="property">
+            <strong>flex-wrap:</strong> nowrap | wrap | wrap-reverse
+          </div>
+          <div class="property">
+            <strong>justify-content:</strong> flex-start | flex-end | center |
+            space-between | space-around | space-evenly
+          </div>
+          <div class="property">
+            <strong>align-items:</strong> stretch | flex-start | flex-end |
+            center | baseline
+          </div>
+          <div class="property">
+            <strong>align-content:</strong> stretch | flex-start | flex-end |
+            center | space-between | space-around
+          </div>
+          <div class="property"><strong>gap:</strong> length | percentage</div>
+        </div>
+
+        <h4>Item Properties:</h4>
+        <div class="property-grid">
+          <div class="property">
+            <strong>flex-grow:</strong> number (default: 0)
+          </div>
+          <div class="property">
+            <strong>flex-shrink:</strong> number (default: 1)
+          </div>
+          <div class="property">
+            <strong>flex-basis:</strong> length | percentage | auto
+          </div>
+          <div class="property"><strong>flex:</strong> grow shrink basis</div>
+          <div class="property">
+            <strong>align-self:</strong> auto | stretch | flex-start | flex-end
+            | center | baseline
+          </div>
+          <div class="property">
+            <strong>order:</strong> integer (default: 0)
+          </div>
+        </div>
+      </div>
+
+      <h2>11. Common Patterns & Tips</h2>
+
+      <div class="highlight">
+        <h4>🎯 Quick Tips:</h4>
+        <ul style="margin-left: 20px; margin-top: 10px">
+          <li>
+            <strong>Equal spacing:</strong> Use
+            <code>justify-content: space-between</code> or
+            <code>space-around</code>
+          </li>
+          <li>
+            <strong>Fill available space:</strong> Use <code>flex: 1</code> on
+            items
+          </li>
+          <li>
+            <strong>Prevent shrinking:</strong> Use <code>flex-shrink: 0</code>
+          </li>
+          <li>
+            <strong>Center everything:</strong> Use
+            <code>justify-content: center; align-items: center;</code>
+          </li>
+          <li>
+            <strong>Responsive design:</strong> Combine with
+            <code>flex-wrap: wrap</code>
+          </li>
+          <li>
+            <strong>Gap instead of margins:</strong> Use the
+            <code>gap</code> property for spacing
+          </li>
+        </ul>
+      </div>
+
+      <div class="code">
+        /* Common Flex Patterns */ /* Holy Grail Layout */ .page { display:
+        flex; flex-direction: column; min-height: 100vh; } .header, .footer {
+        flex-shrink: 0; } .main { flex: 1; display: flex; } .sidebar { flex: 0 0
+        250px; } .content { flex: 1; } /* Equal Height Columns */ .columns {
+        display: flex; } .column { flex: 1; } /* Sticky Footer */ .page {
+        display: flex; flex-direction: column; min-height: 100vh; } .content {
+        flex: 1; } .footer { margin-top: auto; }
+      </div>
+
+      <div
+        style="
+          text-align: center;
+          margin-top: 40px;
+          padding: 20px;
+          background: #f8f9fa;
+          border-radius: 10px;
+        "
+      >
+        <h3>🎉 Congratulations!</h3>
+        <p>
+          You now have a comprehensive understanding of CSS Flexbox. Practice
+          with these examples and experiment with different combinations to
+          master this powerful layout system!
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
